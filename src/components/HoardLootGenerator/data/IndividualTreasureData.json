@@ -8,7 +8,7 @@
         "max": 30,
         "loot": [
           {
-            "type": "мм",
+            "type": "мед. м",
             "number": 5,
             "dice": 6
           }
@@ -19,7 +19,7 @@
         "max": 60,
         "loot": [
           {
-            "type": "см",
+            "type": "сереб. м",
             "number": 4,
             "dice": 6
           }
@@ -30,7 +30,7 @@
         "max": 70,
         "loot": [
           {
-            "type": "эм",
+            "type": "электр. м",
             "number": 3,
             "dice": 6
           }
@@ -41,7 +41,7 @@
         "max": 95,
         "loot": [
           {
-            "type": "зм",
+            "type": "золот. м",
             "number": 3,
             "dice": 6
           }
@@ -52,7 +52,7 @@
         "max": 100,
         "loot": [
           {
-            "type": "пм",
+            "type": "плат. м",
             "number": 1,
             "dice": 6
           }
@@ -69,13 +69,13 @@
         "max": 30,
         "loot": [
           {
-            "type": "мм",
+            "type": "мед. м",
             "number": 4,
             "dice": 6,
             "multi": 100
           },
           {
-            "type": "эм",
+            "type": "электр. м",
             "number": 1,
             "dice": 6,
             "multi": 10
@@ -87,13 +87,13 @@
         "max": 60,
         "loot": [
           {
-            "type": "см",
+            "type": "сереб. м",
             "number": 6,
             "dice": 6,
             "multi": 10
           },
           {
-            "type": "зм",
+            "type": "золот. м",
             "number": 2,
             "dice": 6,
             "multi": 10
@@ -105,13 +105,13 @@
         "max": 70,
         "loot": [
           {
-            "type": "эм",
+            "type": "электр. м",
             "number": 3,
             "dice": 6,
             "multi": 10
           },
           {
-            "type": "зм",
+            "type": "золот. м",
             "number": 2,
             "dice": 6,
             "multi": 10
@@ -123,7 +123,7 @@
         "max": 95,
         "loot": [
           {
-            "type": "зм",
+            "type": "золот. м",
             "number": 4,
             "dice": 6,
             "multi": 10
@@ -135,15 +135,153 @@
         "max": 100,
         "loot": [
           {
-            "type": "зм",
+            "type": "золот. м",
             "number": 2,
             "dice": 6,
             "multi": 10
           },
           {
-            "type": "пм",
+            "type": "плат. м",
             "number": 3,
             "dice": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "min": 11,
+    "max": 16,
+    "lootTable": [
+      {
+        "min": 1,
+        "max": 20,
+        "loot": [
+          {
+            "type": "сереб. м",
+            "number": 4,
+            "dice": 6,
+            "multi": 100
+          },
+          {
+            "type": "золот. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 100
+          }
+        ]
+      },
+      {
+        "min": 21,
+        "max": 35,
+        "loot": [
+          {
+            "type": "электр. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 100
+          },
+          {
+            "type": "золот. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 100
+          }
+        ]
+      },
+      {
+        "min": 36,
+        "max": 75,
+        "loot": [
+          {
+            "type": "золот. м",
+            "number": 2,
+            "dice": 6,
+            "multi": 100
+          },
+          {
+            "type": "плат. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      },
+      {
+        "min": 76,
+        "max": 100,
+        "loot": [
+          {
+            "type": "золот. м",
+            "number": 2,
+            "dice": 6,
+            "multi": 100
+          },
+          {
+            "type": "плат. м",
+            "number": 2,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "min": 17,
+    "max": 30,
+    "lootTable": [
+      {
+        "min": 1,
+        "max": 15,
+        "loot": [
+          {
+            "type": "электр. м",
+            "number": 2,
+            "dice": 6,
+            "multi": 1000
+          },
+          {
+            "type": "золот. м",
+            "number": 8,
+            "dice": 6,
+            "multi": 100
+          }
+        ]
+      },
+      {
+        "min": 16,
+        "max": 55,
+        "loot": [
+          {
+            "type": "золот. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 1000
+          },
+          {
+            "type": "плат. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 100
+          }
+        ]
+      },
+      {
+        "min": 56,
+        "max": 100,
+        "loot": [
+          {
+            "type": "золот. м",
+            "number": 1,
+            "dice": 6,
+            "multi": 1000
+          },
+          {
+            "type": "плат. м",
+            "number": 2,
+            "dice": 6,
+            "multi": 100
           }
         ]
       }

@@ -19,17 +19,18 @@ const generateInt = (minBound: number, maxBound: number) => {
 
 const throwDices = (num: number, dice: number) => {
   console.log("starting roll", num, dice);
-  return Array(num).fill(0)
+  return Array(num)
+    .fill(0)
     .map(() => generateInt(1, dice))
     .reduce((acc, value) => {
-        console.log(acc, value)
+      console.log(acc, value);
       return acc + value;
     }, 0);
 };
 
 const HoardLootGenerator = () => {
   const [danger, setDanger] = useState<Danger>(Danger.First);
-  const [text, setText] = useState<string>();
+  const [lootDescription, setLootDescription] = useState<string>();
 
   const onGenerate = () => {
     const lootTable = individualTreasureData[danger].lootTable;
@@ -43,14 +44,17 @@ const HoardLootGenerator = () => {
 
     loot?.forEach((element) => {
       result +=
-        throwDices(element.number, element.dice) + " " + element.type + ", ";
+        throwDices(element.number, element.dice) * (element.multi || 1) +
+        " " +
+        element.type +
+        ", ";
     });
 
     if (result.length) {
       result = result.substring(0, result.length - 2);
     }
 
-    setText(result);
+    setLootDescription(result);
   };
 
   return (
@@ -58,18 +62,21 @@ const HoardLootGenerator = () => {
       <div className="hoard-loot-generator_part">
         <select
           value={danger}
-          onChange={(danger) => setDanger(danger.target.value)}
+          onChange={(danger) => {
+            setDanger(danger.target.value);
+            setLootDescription("");
+          }}
         >
           <option value={Danger.First}>Опасность 0-4</option>
           <option value={Danger.Second}>Опасность 5-10</option>
-          {/* <option value={Danger.Third}>Опасность 11-16</option> */}
-          {/* <option value={Danger.Fourth}>Опасность 17+</option> */}
+          <option value={Danger.Third}>Опасность 11-16</option>
+          <option value={Danger.Fourth}>Опасность 17+</option>
         </select>
         <button className="hoard-loot-generator_button" onClick={onGenerate}>
           Генерировать
         </button>
       </div>
-      <div className="hoard-loot-generator_part">{text}</div>
+      <div className="hoard-loot-generator_part">Добыча: {lootDescription}</div>
     </div>
   );
 };
