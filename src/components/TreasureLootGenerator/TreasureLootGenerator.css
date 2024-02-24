@@ -1,4 +1,4 @@
-.hoard-loot-generator {
+.treasure-loot-generator {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -8,10 +8,9 @@
   gap: 4vh;
 }
 
-.hoard-loot-generator_part {
+.treasure-loot-generator_part {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 4vw;
 }
-

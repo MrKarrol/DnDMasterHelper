@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./HoardLootGenerator.css";
 import "./data/IndividualTreasureData.json";
 import individualTreasureData from "./data/IndividualTreasureData.json";
+import { useNavigate } from "react-router-dom";
 
 enum Danger {
   First = 0,
@@ -29,6 +30,8 @@ const throwDices = (num: number, dice: number) => {
 };
 
 const HoardLootGenerator = () => {
+  const nav = useNavigate();
+
   const [danger, setDanger] = useState<Danger>(Danger.First);
   const [lootDescription, setLootDescription] = useState<string>();
 
@@ -75,6 +78,7 @@ const HoardLootGenerator = () => {
         <button className="hoard-loot-generator_button" onClick={onGenerate}>
           Генерировать
         </button>
+        <button onClick={() => nav("/")}>На главную</button>
       </div>
       <div className="hoard-loot-generator_part">Добыча: {lootDescription}</div>
     </div>
