@@ -1,0 +1,152 @@
+[
+  {
+    "min": 0,
+    "max": 4,
+    "lootTable": [
+      {
+        "min": 1,
+        "max": 30,
+        "loot": [
+          {
+            "type": "мм",
+            "number": 5,
+            "dice": 6
+          }
+        ]
+      },
+      {
+        "min": 31,
+        "max": 60,
+        "loot": [
+          {
+            "type": "см",
+            "number": 4,
+            "dice": 6
+          }
+        ]
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "loot": [
+          {
+            "type": "эм",
+            "number": 3,
+            "dice": 6
+          }
+        ]
+      },
+      {
+        "min": 71,
+        "max": 95,
+        "loot": [
+          {
+            "type": "зм",
+            "number": 3,
+            "dice": 6
+          }
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "loot": [
+          {
+            "type": "пм",
+            "number": 1,
+            "dice": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "min": 5,
+    "max": 10,
+    "lootTable": [
+      {
+        "min": 1,
+        "max": 30,
+        "loot": [
+          {
+            "type": "мм",
+            "number": 4,
+            "dice": 6,
+            "multi": 100
+          },
+          {
+            "type": "эм",
+            "number": 1,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      },
+      {
+        "min": 31,
+        "max": 60,
+        "loot": [
+          {
+            "type": "см",
+            "number": 6,
+            "dice": 6,
+            "multi": 10
+          },
+          {
+            "type": "зм",
+            "number": 2,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      },
+      {
+        "min": 61,
+        "max": 70,
+        "loot": [
+          {
+            "type": "эм",
+            "number": 3,
+            "dice": 6,
+            "multi": 10
+          },
+          {
+            "type": "зм",
+            "number": 2,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      },
+      {
+        "min": 71,
+        "max": 95,
+        "loot": [
+          {
+            "type": "зм",
+            "number": 4,
+            "dice": 6,
+            "multi": 10
+          }
+        ]
+      },
+      {
+        "min": 96,
+        "max": 100,
+        "loot": [
+          {
+            "type": "зм",
+            "number": 2,
+            "dice": 6,
+            "multi": 10
+          },
+          {
+            "type": "пм",
+            "number": 3,
+            "dice": 6
+          }
+        ]
+      }
+    ]
+  }
+]

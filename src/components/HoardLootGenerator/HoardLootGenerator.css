@@ -1,0 +1,19 @@
+.hoard-loot-generator {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 20vh 20vw 20vh 20vw;
+  gap: 4vh;
+}
+
+.hoard-loot-generator_part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+.hoard-loot-generator_button {
+}
