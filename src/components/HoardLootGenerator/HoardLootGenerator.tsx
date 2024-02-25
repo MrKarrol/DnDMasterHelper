@@ -1,33 +1,8 @@
 import { useState } from "react";
 import "./HoardLootGenerator.css";
-import "./data/IndividualTreasureData.json";
-import individualTreasureData from "./data/IndividualTreasureData.json";
+import individualTreasureData from "./data/IndividualTreasureData.tsx";
 import { useNavigate } from "react-router-dom";
-
-enum Danger {
-  First = 0,
-  Second = 1,
-  Third = 2,
-  Fourth = 3,
-}
-
-const generateInt = (minBound: number, maxBound: number) => {
-  // const value = Math.floor(Math.random() * (maxBound - minBound) + minBound);
-  // console.log(value)
-  // return value
-  return Math.floor(Math.random() * (maxBound - minBound + 1) + minBound);
-};
-
-const throwDices = (num: number, dice: number) => {
-  console.log("starting roll", num, dice);
-  return Array(num)
-    .fill(0)
-    .map(() => generateInt(1, dice))
-    .reduce((acc, value) => {
-      console.log(acc, value);
-      return acc + value;
-    }, 0);
-};
+import { Danger, Select, generateInt, throwDices } from "../../shared";
 
 const HoardLootGenerator = () => {
   const nav = useNavigate();
@@ -47,7 +22,7 @@ const HoardLootGenerator = () => {
 
     loot?.forEach((element) => {
       result +=
-        throwDices(element.number, element.dice) * (element.multi || 1) +
+        throwDices(element.num, element.dice) * (element.multi || 1) +
         " " +
         element.type +
         ", ";
@@ -62,19 +37,14 @@ const HoardLootGenerator = () => {
 
   return (
     <div className="hoard-loot-generator">
+        <p>Генератор лута с мобов</p>
       <div className="hoard-loot-generator_part">
-        <select
-          value={danger}
+        <Select
           onChange={(danger) => {
-            setDanger(danger.target.value);
+            setDanger(danger);
             setLootDescription("");
           }}
-        >
-          <option value={Danger.First}>Опасность 0-4</option>
-          <option value={Danger.Second}>Опасность 5-10</option>
-          <option value={Danger.Third}>Опасность 11-16</option>
-          <option value={Danger.Fourth}>Опасность 17+</option>
-        </select>
+        />
         <button className="hoard-loot-generator_button" onClick={onGenerate}>
           Генерировать
         </button>
